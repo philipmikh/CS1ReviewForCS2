@@ -2,9 +2,9 @@
 
 class CoffeeDrink {
 
-    int numberOfCups;
-    String flavor;
-    boolean hasWhippedCream;
+    public int numberOfCups;
+    private String flavor;
+    public boolean hasWhippedCream;
 
     // Constructor for CoffeeDrink class
     public CoffeeDrink(int numberOfCups, String flavor, boolean hasWhippedCream) {
@@ -24,6 +24,27 @@ class CoffeeDrink {
 
     }
 
+    //TODO
+    //method overloading with constructor
+    public CoffeeDrink(){
+        numberOfCups = 1;
+        flavor = "coffee";
+        hasWhippedCream = false;
+        //default coffee order
+        //default to 1 cup
+
+    }
+
+    public CoffeeDrink(int paramNumberOfCups){
+        numberOfCups = paramNumberOfCups;
+        flavor = "coffee";
+        hasWhippedCream = false;
+        //default to whatever the parameter number was
+
+    }
+
+
+
 
     // Method to print information about the CoffeeDrink
     public void printInfo() {
@@ -36,6 +57,16 @@ class CoffeeDrink {
         }
         // Make this method print order details.
         // Include information stored in each variable.
+
+    }
+
+    //"getter" method for flavor variables - to be able to get/see another flavor from a different class
+    public String getFlavor(){
+        return flavor;
+    }
+    //"setter" method for flavor variables
+    public void setFlavor(String flavor){
+        this.flavor = flavor;
 
     }
 }
